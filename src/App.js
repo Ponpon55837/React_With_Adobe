@@ -1,5 +1,5 @@
 import React from 'react'
-import { AodbeButton, AdobeSearchField } from './components/example'
+import { AodbeButton, AdobeSearchField, AdobeCheckbox } from './components/example'
 
 const App = () => {
   return (
@@ -10,6 +10,10 @@ const App = () => {
         placeholder="What are you looking for?"
         onSubmit={(text) => alert(text)}
       />
+      <AdobeCheckbox
+        onChange={(isChecked) => ( isChecked ? console.log('click') : console.log('unclick'))}>
+        Check me
+      </AdobeCheckbox>
     </div>
   )
 }
